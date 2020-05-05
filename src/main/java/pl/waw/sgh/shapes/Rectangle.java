@@ -4,7 +4,7 @@ public class Rectangle extends Shape implements PerimeterCalculation {
     // Constructors are not inherited!!!
     // If parent doesn't have a default constructor (no parameters) then no default constructor here
     public Rectangle(double a, double b) {
-        super(a, b);
+        super(a, b, 0, 0);
         //parB = b;
     }
 

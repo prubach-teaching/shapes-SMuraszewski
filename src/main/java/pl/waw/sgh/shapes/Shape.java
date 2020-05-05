@@ -3,18 +3,23 @@ package pl.waw.sgh.shapes;
 public abstract class Shape implements Comparable<Shape> {
     protected double parA;
     protected double parB;
+    protected double parC;
+    protected double parD;
 
 //    public Shape() {
 //    }
 
-    public Shape(double a, double b) {
-        setParams(a, b);
+    public Shape(double a, double b, double c, double d) {
+        setParams(a, b, c, d);
     }
 
-    public void setParams(double parA, double b) {
+    public void setParams(double parA, double b, double c, double d) {
         System.out.println("Changing parameters parA from: " + this.parA + " to: " + parA);
         this.parA = parA;
         parB = b;
+        parC = c;
+        parD = d;
+        
     }
 
     public abstract double calcSurface();
@@ -31,6 +36,6 @@ public abstract class Shape implements Comparable<Shape> {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " ["+ parA + ", " + parB + "]";
+        return getClass().getSimpleName() + " ["+ parA + ", " + parB + ", " + parC + ", " + parD +"]";
     }
 }
